@@ -1,0 +1,51 @@
+ERROR:root:Failed to connect or query database: could not translate host name "testtask-db" to address: Name or service not known
+
+ERROR:root:Failed to connect or query database: could not translate host name "testtask-db" to address: Name or service not known
+
+ERROR:root:Failed to connect or query database: could not translate host name "testtask-db" to address: Name or service not known
+
+ERROR:root:Failed to connect or query database: could not translate host name "testtask-db" to address: Name or service not known
+
+ERROR:root:Failed to connect or query database: could not translate host name "testtask-db" to address: Name or service not known
+
+ERROR:root:Failed to connect or query database: could not translate host name "testtask-db" to address: Name or service not known
+
+ERROR:root:Failed to connect or query database: could not translate host name "testtask-db" to address: Name or service not known
+
+ERROR:root:Failed to connect or query database: could not translate host name "testtask-db" to address: Name or service not known
+
+ERROR:root:Failed to connect or query database: could not translate host name "testtask-db" to address: Name or service not known
+
+ERROR:root:could not translate host name "testtask-db" to address: Name or service not known
+Traceback (most recent call last):
+  File "/app/server.py", line 22, in do_GET
+    conn = psycopg2.connect(
+  File "/usr/local/lib/python3.9/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: could not translate host name "testtask-db" to address: Name or service not known
+
+ERROR:root:Failed to connect or query database: could not translate host name "testtask-db" to address: Name or service not known
+
+ERROR:root:could not translate host name "testtask-db" to address: Name or service not known
+Traceback (most recent call last):
+  File "/app/server.py", line 22, in do_GET
+    conn = psycopg2.connect(
+  File "/usr/local/lib/python3.9/site-packages/psycopg2/__init__.py", line 122, in connect
+    conn = _connect(dsn, connection_factory=connection_factory, **kwasync)
+psycopg2.OperationalError: could not translate host name "testtask-db" to address: Name or service not known
+
+INFO:root:Connected to database
+ERROR:root:Failed to connect or query database: relation "ads" does not exist
+LINE 1: SELECT title, image_url FROM ads LIMIT 500
+                                     ^
+
+ERROR:root:relation "ads" does not exist
+LINE 1: SELECT title, image_url FROM ads LIMIT 500
+                                     ^
+Traceback (most recent call last):
+  File "/app/server.py", line 34, in do_GET
+    cursor.execute("SELECT title, image_url FROM ads LIMIT 500")
+psycopg2.errors.UndefinedTable: relation "ads" does not exist
+LINE 1: SELECT title, image_url FROM ads LIMIT 500
+                                     ^
+
