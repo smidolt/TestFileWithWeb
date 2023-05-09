@@ -35,7 +35,7 @@ class PostgresPipeline:
         self.conn.close()
 
     def process_item(self, item, spider):
-        # вставка данных в таблицу ads (добавление поля url)
+        # вставка данных в таблицу ads
         self.cursor.execute("INSERT INTO sreality (title, image_url, url) VALUES (%s, %s, %s)", (item['title'], item['image_url'], item['url']))
         self.conn.commit()
         return item
