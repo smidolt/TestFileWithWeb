@@ -1,8 +1,8 @@
 import scrapy
 
 class SrealityItem(scrapy.Item):
-    # define the fields for your item here like:
-    title = scrapy.Field()
-    image_url = scrapy.Field()
-    price = scrapy.Field()
-    url = scrapy.Field()  # добавление поля url для хранения адреса объявления
+
+    title = scrapy.Field()       # Title of the item
+    image_url = scrapy.Field()   # URL of the item's image
+    price = scrapy.Field()       # Price of the item
+    url = scrapy.Field()         # URL of the item's ad (additional field for storing the ad address)

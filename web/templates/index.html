@@ -1,9 +1,9 @@
 <html>
 <body>
-{% for item in items %}
-<h2>{{ item[0] }}</h2>
-<img src="{{ item[1] }}">
-<br>
-{% endfor %}
+{% for item in items %} <!-- Start of loop over the items list -->
+<h2>{{ item[0] }}</h2> <!-- Display the first element of the item as a heading -->
+<img src="{{ item[1] }}"> <!-- Display the second element of the item as an image source -->
+<br> <!-- Line break -->
+{% endfor %} <!-- End of loop -->
 </body>
 </html>

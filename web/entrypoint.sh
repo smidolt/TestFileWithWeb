@@ -1,14 +1,14 @@
 #!/bin/sh
-set -e
+set -e  # If a command fails, stop the script immediately
 
-# Ждем, пока база данных станет доступной
+# Wait for the database to become available
 until PGPASSWORD=$POSTGRES_PASSWORD psql -h db -U $POSTGRES_USER -c '\q'; do
-  echo "Postgres is unavailable - sleeping"
-  sleep 1
+  echo "Postgres is unavailable - sleeping"  # Print a message to the console
+  sleep 1  # Pause execution for 1 second
 done
 
-# Выполняем init.sql
+# Execute init.sql
 PGPASSWORD=$POSTGRES_PASSWORD psql -h db -U $POSTGRES_USER -f /init.sql
 
-# Запускаем сервер
+# Start the server
 exec python server.py
