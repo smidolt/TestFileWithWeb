@@ -1,0 +1,108 @@
+[+] Running 4/4
+ ✔ Network luxonis_app_network  Created                                                       0.0s 
+ ✔ Container db                 Created                                                       0.1s 
+ ✔ Container luxonis-web-1      Created                                                       0.1s 
+ ✔ Container luxonis-scrapy-1   Created                                                       0.0s 
+Attaching to db, luxonis-scrapy-1, luxonis-web-1
+db                | 
+db                | PostgreSQL Database directory appears to contain a database; Skipping initialization
+db                | 
+db                | 2023-05-15 05:34:01.511 UTC [1] LOG:  starting PostgreSQL 13.11 (Debian 13.11-1.pgdg110+1) on aarch64-unknown-linux-gnu, compiled by gcc (Debian 10.2.1-6) 10.2.1 20210110, 64-bit
+db                | 2023-05-15 05:34:01.511 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+db                | 2023-05-15 05:34:01.511 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+db                | 2023-05-15 05:34:01.513 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+db                | 2023-05-15 05:34:01.516 UTC [27] LOG:  database system was interrupted; last known up at 2023-05-15 05:29:18 UTC
+db                | 2023-05-15 05:34:01.606 UTC [27] LOG:  database system was not properly shut down; automatic recovery in progress
+db                | 2023-05-15 05:34:01.607 UTC [27] LOG:  redo starts at 0/15F1C68
+db                | 2023-05-15 05:34:01.607 UTC [27] LOG:  invalid record length at 0/15F1CA0: wanted 24, got 0
+db                | 2023-05-15 05:34:01.607 UTC [27] LOG:  redo done at 0/15F1C68
+db                | 2023-05-15 05:34:01.618 UTC [1] LOG:  database system is ready to accept connections
+luxonis-web-1     |  * Serving Flask app 'server' (lazy loading)
+luxonis-web-1     |  * Environment: production
+luxonis-web-1     |    WARNING: This is a development server. Do not use it in a production deployment.
+luxonis-web-1     |    Use a production WSGI server instead.
+luxonis-web-1     |  * Debug mode: off
+luxonis-web-1     | WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+luxonis-web-1     |  * Running on all addresses (0.0.0.0)
+luxonis-web-1     |  * Running on http://127.0.0.1:8080
+luxonis-web-1     |  * Running on http://192.168.16.4:8080
+luxonis-web-1     | Press CTRL+C to quit
+luxonis-scrapy-1  | 2023-05-15 05:34:02 [scrapy.utils.log] INFO: Scrapy 2.8.0 started (bot: new_scrapyproject)
+luxonis-scrapy-1  | 2023-05-15 05:34:02 [scrapy.utils.log] INFO: Versions: lxml 4.9.2.0, libxml2 2.9.14, cssselect 1.2.0, parsel 1.8.1, w3lib 2.1.1, Twisted 22.10.0, Python 3.9.16 (main, May  3 2023, 09:13:29) - [GCC 10.2.1 20210110], pyOpenSSL 21.0.0 (OpenSSL 1.1.1l  24 Aug 2021), cryptography 3.4.8, Platform Linux-5.15.49-linuxkit-aarch64-with-glibc2.31
+luxonis-scrapy-1  | 2023-05-15 05:34:02 [scrapy.crawler] INFO: Overridden settings:
+luxonis-scrapy-1  | {'BOT_NAME': 'new_scrapyproject',
+luxonis-scrapy-1  |  'FEED_EXPORT_ENCODING': 'utf-8',
+luxonis-scrapy-1  |  'NEWSPIDER_MODULE': 'new_scrapyproject.spiders',
+luxonis-scrapy-1  |  'ROBOTSTXT_OBEY': True,
+luxonis-scrapy-1  |  'SPIDER_MODULES': ['new_scrapyproject.spiders'],
+luxonis-scrapy-1  |  'USER_AGENT': 'new_scrapyproject (+http://www.yourdomain.com)'}
+luxonis-scrapy-1  | 2023-05-15 05:34:02 [py.warnings] WARNING: /usr/local/lib/python3.9/site-packages/scrapy/utils/request.py:232: ScrapyDeprecationWarning: '2.6' is a deprecated value for the 'REQUEST_FINGERPRINTER_IMPLEMENTATION' setting.
+luxonis-scrapy-1  | 
+luxonis-scrapy-1  | It is also the default value. In other words, it is normal to get this warning if you have not defined a value for the 'REQUEST_FINGERPRINTER_IMPLEMENTATION' setting. This is so for backward compatibility reasons, but it will change in a future version of Scrapy.
+luxonis-scrapy-1  | 
+luxonis-scrapy-1  | See the documentation of the 'REQUEST_FINGERPRINTER_IMPLEMENTATION' setting for information on how to handle this deprecation.
+luxonis-scrapy-1  |   return cls(crawler)
+luxonis-scrapy-1  | 
+luxonis-scrapy-1  | 2023-05-15 05:34:02 [scrapy.utils.log] DEBUG: Using reactor: twisted.internet.epollreactor.EPollReactor
+luxonis-scrapy-1  | 2023-05-15 05:34:02 [scrapy.extensions.telnet] INFO: Telnet Password: 6d1205e420d0d558
+luxonis-scrapy-1  | 2023-05-15 05:34:02 [scrapy.middleware] INFO: Enabled extensions:
+luxonis-scrapy-1  | ['scrapy.extensions.corestats.CoreStats',
+luxonis-scrapy-1  |  'scrapy.extensions.telnet.TelnetConsole',
+luxonis-scrapy-1  |  'scrapy.extensions.memusage.MemoryUsage',
+luxonis-scrapy-1  |  'scrapy.extensions.logstats.LogStats']
+luxonis-scrapy-1  | 2023-05-15 05:34:02 [scrapy.middleware] INFO: Enabled downloader middlewares:
+luxonis-scrapy-1  | ['scrapy.downloadermiddlewares.robotstxt.RobotsTxtMiddleware',
+luxonis-scrapy-1  |  'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+luxonis-scrapy-1  |  'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+luxonis-scrapy-1  |  'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+luxonis-scrapy-1  |  'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+luxonis-scrapy-1  |  'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+luxonis-scrapy-1  |  'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+luxonis-scrapy-1  |  'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+luxonis-scrapy-1  |  'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+luxonis-scrapy-1  |  'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+luxonis-scrapy-1  |  'scrapy.downloadermiddlewares.httpproxy.HttpProxyMiddleware',
+luxonis-scrapy-1  |  'scrapy.downloadermiddlewares.stats.DownloaderStats']
+luxonis-scrapy-1  | 2023-05-15 05:34:02 [scrapy.middleware] INFO: Enabled spider middlewares:
+luxonis-scrapy-1  | ['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+luxonis-scrapy-1  |  'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+luxonis-scrapy-1  |  'scrapy.spidermiddlewares.referer.RefererMiddleware',
+luxonis-scrapy-1  |  'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+luxonis-scrapy-1  |  'scrapy.spidermiddlewares.depth.DepthMiddleware']
+luxonis-scrapy-1  | 2023-05-15 05:34:02 [scrapy.middleware] INFO: Enabled item pipelines:
+luxonis-scrapy-1  | ['new_scrapyproject.pipelines.PostgresPipeline']
+luxonis-scrapy-1  | 2023-05-15 05:34:02 [scrapy.core.engine] INFO: Spider opened
+luxonis-scrapy-1  | 2023-05-15 05:34:02 [scrapy.extensions.logstats] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+luxonis-scrapy-1  | 2023-05-15 05:34:02 [scrapy.extensions.telnet] INFO: Telnet console listening on 127.0.0.1:6023
+luxonis-scrapy-1  | 2023-05-15 05:34:02 [scrapy.core.engine] DEBUG: Crawled (200) <GET https://www.sreality.cz/robots.txt> (referer: None)
+luxonis-scrapy-1  | 2023-05-15 05:34:02 [scrapy.downloadermiddlewares.robotstxt] DEBUG: Forbidden by robots.txt: <GET https://www.sreality.cz/en/search/for-sale/apartments/all-countries>
+luxonis-scrapy-1  | 2023-05-15 05:34:02 [scrapy.core.engine] INFO: Closing spider (finished)
+luxonis-scrapy-1  | 2023-05-15 05:34:02 [scrapy.statscollectors] INFO: Dumping Scrapy stats:
+luxonis-scrapy-1  | {'downloader/exception_count': 1,
+luxonis-scrapy-1  |  'downloader/exception_type_count/scrapy.exceptions.IgnoreRequest': 1,
+luxonis-scrapy-1  |  'downloader/request_bytes': 237,
+luxonis-scrapy-1  |  'downloader/request_count': 1,
+luxonis-scrapy-1  |  'downloader/request_method_count/GET': 1,
+luxonis-scrapy-1  |  'downloader/response_bytes': 6636,
+luxonis-scrapy-1  |  'downloader/response_count': 1,
+luxonis-scrapy-1  |  'downloader/response_status_count/200': 1,
+luxonis-scrapy-1  |  'elapsed_time_seconds': 0.400229,
+luxonis-scrapy-1  |  'finish_reason': 'finished',
+luxonis-scrapy-1  |  'finish_time': datetime.datetime(2023, 5, 15, 5, 34, 2, 550309),
+luxonis-scrapy-1  |  'log_count/DEBUG': 3,
+luxonis-scrapy-1  |  'log_count/INFO': 10,
+luxonis-scrapy-1  |  'log_count/WARNING': 1,
+luxonis-scrapy-1  |  'memusage/max': 62734336,
+luxonis-scrapy-1  |  'memusage/startup': 62734336,
+luxonis-scrapy-1  |  'response_received_count': 1,
+luxonis-scrapy-1  |  'robotstxt/forbidden': 1,
+luxonis-scrapy-1  |  'robotstxt/request_count': 1,
+luxonis-scrapy-1  |  'robotstxt/response_count': 1,
+luxonis-scrapy-1  |  'robotstxt/response_status_count/200': 1,
+luxonis-scrapy-1  |  'scheduler/dequeued': 1,
+luxonis-scrapy-1  |  'scheduler/dequeued/memory': 1,
+luxonis-scrapy-1  |  'scheduler/enqueued': 1,
+luxonis-scrapy-1  |  'scheduler/enqueued/memory': 1,
+luxonis-scrapy-1  |  'start_time': datetime.datetime(2023, 5, 15, 5, 34, 2, 150080)}
+luxonis-scrapy-1  | 2023-05-15 05:34:02 [scrapy.core.engine] INFO: Spider closed (finished)
+luxonis-scrapy-1 exited with code 0

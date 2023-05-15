@@ -12,6 +12,9 @@ NEWSPIDER_MODULE = "new_scrapyproject.spiders"
 # Whether to obey robots.txt rules
 ROBOTSTXT_OBEY = True
 
+# # The implementation of request fingerprinting
+# REQUEST_FINGERPRINTER_IMPLEMENTATION = "2.7"
+
 # The encoding of the feed export
 FEED_EXPORT_ENCODING = "utf-8"
 
